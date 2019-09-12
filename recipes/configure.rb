@@ -58,7 +58,7 @@ redis_instances.each do |current_server|
       supports start: true, stop: true, restart: true, status: false
     end
   when 'systemd'
-    service "redis@#{server_name}" do
+    service "redis#{server_name}" do
       provider Chef::Provider::Service::Systemd
       supports start: true, stop: true, restart: true, status: true
     end

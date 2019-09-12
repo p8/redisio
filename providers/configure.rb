@@ -368,7 +368,7 @@ def configure
           )
         end
       when 'systemd'
-        service_name = "redis@#{server_name}"
+        service_name = "redis#{server_name}"
         reload_name = "#{service_name} systemd reload"
 
         file "/etc/tmpfiles.d/#{service_name}.conf" do
